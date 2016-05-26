@@ -1,0 +1,15 @@
+# Maven
+target
+
+# Eclipse
+.classpath
+.settings
+.factorypath
+.project
+bin
+
+# Java output
+.class
+.jar
+.war
+.ear
