@@ -1,0 +1,17 @@
+# Maven
+target
+
+# Eclipse
+# must commit .project file to have code audits auto enabled  :-/
+.classpath
+.settings
+.factorypath
+.metadata
+
+bin
+
+# Java output
+.class
+.jar
+.war
+.ear
