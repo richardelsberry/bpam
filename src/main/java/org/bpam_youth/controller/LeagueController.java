@@ -53,13 +53,13 @@ public class LeagueController {
 	return "redirect:/{league}";
 	}
 	
-	@RequestMapping(value="/{league}", method=RequestMethod.POST)
-	public String removeFromLeaguesList(
-	@PathVariable("league") LeagueEntity league) {
-		System.out.println("------------------"+league.toString());
-		leagueRepository.delete(league);
-	return "redirect:/{league}";
-	}
+//	@RequestMapping(value="/{league}", method=RequestMethod.POST)
+//	public String removeFromLeaguesList(
+//	@PathVariable("league") LeagueEntity league) {
+//		System.out.println("------------------"+league.toString());
+//		leagueRepository.delete(league);
+//	return "redirect:/{league}";
+//	}
 
 
 }
