@@ -7,59 +7,52 @@ import org.bpam_youth.repository.LeagueRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/bpamAdmin")
 public class LeagueController {
-	
-//	@Autowired
-//	LeagueEntity league;
 	
 	@Autowired
 	LeagueRepository leagueRepository;
 	
 	@RequestMapping(method=RequestMethod.GET)
-	public String getLeagues(
-		@PathVariable("league") String league,
-		Model model) {
-			List<LeagueEntity> leaguesList =
-					leagueRepository.findAll();
-			if (leaguesList != null) {
-				model.addAttribute("leagues", leaguesList);
-			}
-	return "league";
+	public String getLeagues(Model model) {
+		model.addAttribute("league", new LeagueEntity());
+	return "leagueList";
 	}
 	
-	@RequestMapping(value="/{league}", method=RequestMethod.GET)
+	@RequestMapping(value="/edit/{leagueId}", method=RequestMethod.GET)
 	public String getLeague(
-		@PathVariable("league") String league,
+		@PathVariable("leagueId") Long leagueId,
 		Model model) {
-			List<LeagueEntity> leaguesList =
-					leagueRepository.findByName(league);
-			if (leaguesList != null) {
-				model.addAttribute("leagues", leaguesList);
+			LeagueEntity league =
+					leagueRepository.findById(leagueId);
+			if (league != null) {
+				model.addAttribute("league", league);
 			}
-	return "league";
+	return "leagueList";
 	}
 	
-	@RequestMapping(value="/{league}", method=RequestMethod.POST)
-	public String addToLeaguesList(
-	@PathVariable("league") LeagueEntity league) {
-		System.out.println("------------------"+league.toString());
+	@RequestMapping(params = "save", method=RequestMethod.POST)
+	public String addToLeaguesList(@ModelAttribute LeagueEntity league, BindingResult error) {
 		leagueRepository.save(league);
-	return "redirect:/{league}";
+		return "redirect:/bpamAdmin";
 	}
 	
-//	@RequestMapping(value="/{league}", method=RequestMethod.POST)
-//	public String removeFromLeaguesList(
-//	@PathVariable("league") LeagueEntity league) {
-//		System.out.println("------------------"+league.toString());
-//		leagueRepository.delete(league);
-//	return "redirect:/{league}";
-//	}
-
-
+	@RequestMapping(params = "remove",  method=RequestMethod.POST)
+	public String removeFromLeaguesList(@ModelAttribute LeagueEntity league) {
+		leagueRepository.delete(league);
+	return "redirect:/bpamAdmin";
+	}
+	
+    @ModelAttribute("leagues")
+    public List<LeagueEntity> getAllLeagues() {
+    	List<LeagueEntity> list = leagueRepository.findAllByOrderByNameAsc();
+        return list;
+    }
 }
