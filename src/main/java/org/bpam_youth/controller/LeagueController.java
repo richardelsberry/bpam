@@ -14,45 +14,31 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/bpamAdmin")
+@RequestMapping("/bpam/home")
 public class LeagueController {
 	
 	@Autowired
 	LeagueRepository leagueRepository;
-	
+
 	@RequestMapping(method=RequestMethod.GET)
-	public String getLeagues(Model model) {
-		model.addAttribute("league", new LeagueEntity());
-	return "leagueList";
+	public String getHome(Model model) {
+		//model.addAttribute("league", new LeagueEntity());
+		return "home";
 	}
-	
-	@RequestMapping(value="/edit/{leagueId}", method=RequestMethod.GET)
-	public String getLeague(
-		@PathVariable("leagueId") Long leagueId,
-		Model model) {
-			LeagueEntity league =
-					leagueRepository.findById(leagueId);
-			if (league != null) {
-				model.addAttribute("league", league);
-			}
-	return "leagueList";
+
+	@RequestMapping(value="search/{zip}", method=RequestMethod.GET)
+	public String searchLeague(Model model, @PathVariable String zip) {
+		//model.addAttribute("league", new LeagueEntity());
+		System.out.println("searching with zip "+zip);
+		return "home";
 	}
-	
-	@RequestMapping(params = "save", method=RequestMethod.POST)
-	public String addToLeaguesList(@ModelAttribute LeagueEntity league, BindingResult error) {
-		leagueRepository.save(league);
-		return "redirect:/bpamAdmin";
+
+	@RequestMapping(value="/{leagueId}", method=RequestMethod.GET)
+	public String getLeague(Model model, @PathVariable Long leagueId) {
+		LeagueEntity league = leagueRepository.findById(leagueId);
+		model.addAttribute("league", league);
+		System.out.println("go to league page for id::- "+leagueId);
+	return "league";
 	}
-	
-	@RequestMapping(params = "remove",  method=RequestMethod.POST)
-	public String removeFromLeaguesList(@ModelAttribute LeagueEntity league) {
-		leagueRepository.delete(league);
-	return "redirect:/bpamAdmin";
-	}
-	
-    @ModelAttribute("leagues")
-    public List<LeagueEntity> getAllLeagues() {
-    	List<LeagueEntity> list = leagueRepository.findAllByOrderByNameAsc();
-        return list;
-    }
+
 }

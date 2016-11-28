@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/bpamAdmin")
+@RequestMapping("/bpam/admin")
 public class LeagueAdminController {
 
     @Autowired
@@ -41,13 +41,13 @@ public class LeagueAdminController {
     @RequestMapping(params = "save", method=RequestMethod.POST)
     public String addToLeaguesList(@ModelAttribute LeagueEntity league, BindingResult error) {
         leagueRepository.save(league);
-        return "redirect:/bpamAdmin";
+        return "redirect:admin";
     }
 
     @RequestMapping(params = "remove",  method=RequestMethod.POST)
     public String removeFromLeaguesList(@ModelAttribute LeagueEntity league) {
         leagueRepository.delete(league);
-        return "redirect:/bpamAdmin";
+        return "redirect:/bpam/admin";
     }
 
     @ModelAttribute("leagues")
