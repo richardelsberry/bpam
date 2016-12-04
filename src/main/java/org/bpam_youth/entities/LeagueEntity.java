@@ -16,7 +16,7 @@ public class LeagueEntity {
 	private String address2;
 	private String city;
 	private String state;
-	private String zip;
+	private String zipCode;
 	private String phone;
 	private String hours;
 	private String event;
@@ -70,11 +70,11 @@ public class LeagueEntity {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	public String getZip() {
-		return zip;
+	public String getZipCode() {
+		return zipCode;
 	}
-	public void setZip(String zip) {
-		this.zip = zip;
+	public void setZipCode(String zip) {
+		this.zipCode = zipCode;
 	}
 	public String getHours() {
 		return hours;

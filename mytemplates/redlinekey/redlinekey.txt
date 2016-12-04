@@ -1,0 +1,5 @@
+application key
+vUjHMwZtpiKcDwamhFI438d3SO4dJmBegUV2rVwQeg3RNde4TW9W4nZXb4aUqM9H
+
+javascript client key
+js-GcUhqNYJbu1CeWQdDY3KRxQvJ5kox1tednwDbummYoZdlPqYOuIG1zcLEwacxDqK

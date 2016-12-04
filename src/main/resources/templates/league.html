@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>BPAM Youth League Page</title>
@@ -10,11 +11,12 @@
     <!-- FAVICON -->
     <link href="bpam/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <!-- CSS FILES -->
-    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/css/normalize.css}" rel="stylesheet" type="text/css" />
     <link th:href="@{/css/animate.css}" rel="stylesheet" type="text/css" />
     <link th:href="@{/css/gridism.css}" rel="stylesheet" type="text/css" />
     <link th:href="@{/css/nerveslider.css}" rel="stylesheet" type="text/css" />
     <link th:href="@{/css/owl.carousel.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css" />
     <link th:href="@{/css/colors.css}" rel="stylesheet" type="text/css" />
     <link th:href="@{/css/media.css}" rel="stylesheet" type="text/css" />
 
@@ -26,22 +28,21 @@
 </head>
 
 <body>
-<h2>BPAM Youth League Page3</h2>
+<h2>BPAM Youth League Page</h2>
 
 <a href="/bpam/home">Back Home</a>
 <br/>
 <a href="/bpam/admin">To Admin Page</a>
 
 <!-- MAIN CONTAINER -->
-<div id="main" th:style="'background:url(' + @{/images/bpma-background3.jpg} + '); padding: 100px 60px 60px 40px;'" >
+<div id="main" style="background:url(/images/bpma-background3.jpg); padding: 100px 40px 40px 40px;">
     <!-- HEADER -->
     <header id="site-header">
         <div class="header-container">
             <!-- HEADER LEFT -->
             <div class="header-left">
                 <!-- LOGO -->
-                <h3 class="main-content" style="background-color: black; color: wheat">
-                    Bowling Proprieters of Minnesota
+                <h3 class="main-content" style="background-color: #222222; color: wheat">
                     <span th:text="${league.name}">Name</span>
                 </h3>
                 <!--<a href="index.html">-->
@@ -557,6 +558,12 @@
 <script type="text/javascript" src="/js/nerveslider.js"></script>
 <script type="text/javascript" src="/js/owl.carousel.min.js"></script>
 
+<script type="text/javascript" src="/js/custom.js"></script>
+<script type="text/javascript" src="/js/easyResponsiveTabs.js"></script>
+<script type="text/javascript" src="/js/jflickrfee.min.js"></script>
+<script type="text/javascript" src="/js/lightGallery.js"></script>
+<script type="text/javascript" src="/js/mondernizr.js"></script>
+
 
 
 <!-- SLIDER -->
@@ -640,7 +647,8 @@
     });
 </script>
 <!-- CUSTOM JS -->
-<script type="text/javascript" th:href="@{/js/custom.js}" />
+<!--<script type="text/javascript" th:href="@{/js/custom.js}" />-->
+<script type="text/javascript" src="/js/custom.js"></script>
 </body>
 
 </html>

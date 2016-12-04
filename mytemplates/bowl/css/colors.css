@@ -1,0 +1,566 @@
+/* ---------------------- 
+Stylesheet Guide
+-------------------------
+
+GENERAL STYLES
+HEADER
+SOCIAL ICONS
+MAIN PAGE STRUCTURE
+NERVESLIDER
+SLIDE-IN PANEL
+MAIN MENU
+HOME IMAGE BOXES
+BW TABLE
+FLICKR
+FORMS
+CAROUSEL
+COLORBOX
+ACCORDION
+GALLERY
+BLOG
+LIGHTGALLERY
+FLEX IMAGE
+TABS
+PRICING TABLE
+TESTIMONIALS
+FOOTER
+
+*/
+/* ================= GENERAL STYLES ================== */
+body {
+    background-color:#f3f3f3;
+    color:#6f6f6f;
+}
+h1,h2,h3,h4,h5,h6 {
+    color:#222222;
+}
+h1.border:after,
+h2.border:after,
+h3.border:after,
+h4.border:after,
+h5.border:after,
+h6.border:after {
+    background-color: #de3926;
+}
+#footer h1.border:after,
+#footer h2.border:after,
+#footer h3.border:after,
+#footer h4.border:after,
+#footer h5.border:after,
+#footer h6.border:after {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+p {
+    color:#6f6f6f;
+}
+a {
+    color: #222;
+}
+a:hover {
+    color: #de3926;
+}
+hr {
+    background-color:#f3f3f3;
+}
+.label {
+    background-color: #f3f3f3;
+    border-left: 3px solid #de3926;
+}
+blockquote {
+    background: #f3f3f3;
+}
+blockquote:before,blockquote:after {
+	background-color: #de3926;
+    border:5px solid #fff;
+}
+/* ================= HEADER ================== */
+#site-header {
+    background-color: #222222;
+}
+.mobil-menu,.mobil-menu:hover {
+    color:#fff;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+/* ================= SOCIAL ICONS ================== */
+.social-icons li {
+    border:3px solid #fff;
+}
+#bw-nav .social-icons li{
+    border:3px solid #6f6f6f;
+    background-color: #6f6f6f;
+}
+#bw-nav .social-icons li:hover{
+    border:3px solid #de3926;
+    background-color: #de3926;
+}
+/* ================= MAIN PAGE STRUCTURE ================== */
+#main {
+    background-color:#f3f3f3;
+}
+.main-content {
+    background-color: #fff;
+}
+#page-title-container h1 span{
+    background-color: #de3926;
+    color: #fff;
+}
+/* ================= NERVESLIDER ================== */
+#home-slider {
+    background-color:#f3f3f3;
+}
+.ns_nerveSlider.light .ns_prevButton,
+.ns_nerveSlider.light .ns_nextButton,
+.ns_nerveSlider.light .ns_pauseButton div {
+    border: 3px solid #fff;
+}
+.ns_nerveSlider .ns_slideContent div span {
+    background-color: #de3926;
+    color: #fff;
+}
+/* ================= SLIDE-IN PANEL ================== */
+.bw-nav {
+  background-color: #f3f3f3;
+}
+.bw-nav .bw-block-container {
+    background-color: rgba(243,243,243,0.9);
+}
+.bw-nav .bw-half-block.left-block {
+    background-color: #fff;
+}
+.bw-nav .bw-close {
+    background-color: #de3926;
+}
+.bw-nav .bw-contact-info p {
+    color: #6f6f6f;
+}
+/* ================= MAIN MENU ================== */
+.menu-title,.bw-contact-title {
+    color: #6f6f6f;
+}
+#mainmenu li.active > a,#mainmenu li.active > a:hover {
+    color: #de3926;
+}
+#mainmenu ul li a {
+    color: #222;
+}
+#mainmenu ul li a:hover,#mainmenu ul > li > a.has-sub2 {
+    color: #de3926;
+}
+#mainmenu ul ul {
+    border-left: 3px solid #de3926;
+}
+.menu-title-border,.bw-contact-border {
+    background-color: #de3926;
+    background: -webkit-linear-gradient(left, #de3926, #de3926 60px, transparent 60px, transparent);
+}
+/* ================= HOME IMAGE BOXES ================== */
+.bw-image{
+    background-color: #fff;
+    border:10px solid #fff;
+}
+.bw-image-box figcaption h3 {
+    background-color: #de3926;
+    color:#fff;
+}
+/* ================= BW TABLE ================== */
+.bw-table li {
+    color: #6f6f6f;
+}
+.bw-table li {
+    border-bottom: 1px solid #f3f3f3;
+}
+.bw-table .bw-table-title {
+    color: #222;
+}
+.bw-table .bw-table-price {
+    background-color: #f3f3f3;
+}
+/* ================= FLICKR  ================== */
+.flickr-box li img {
+    border:3px solid #fff;
+}
+.footer-content .flickr-box li img {
+    border:3px solid rgba(255, 255, 255, 0.1);
+}
+.flickr-box li img:hover {
+    border:3px solid #de3926;
+}
+.footer-content .flickr-box li img:hover {
+    border:3px solid #fff;
+}
+/* ================= FORMS  ================== */
+input,
+textarea {
+    background-color: #fff;
+    border: 1px solid #f3f3f3;
+    color: #6f6f6f;
+}
+input:focus,
+textarea:focus {
+    background-color: #f3f3f3;
+    color: #222;
+}
+.bw-button {
+    background-color: #fff;
+    border: 3px solid #222;
+	color: #222;
+}
+.bw-button:hover {
+    background-color: #de3926;
+    border: 3px solid #de3926;
+    color:#fff;
+}
+.searchbox .bw-button {
+    background-color: #6f6f6f;
+}
+.searchbox .bw-button:hover {
+    background-color: #222;
+}
+/* ================= CAROUSEL  ================== */
+.owl-theme .owl-dots .owl-dot span {
+    background: #f3f3f3;
+    border: 3px solid #fff;
+}
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: #de3926;
+    border: 3px solid #de3926;
+}
+.owl-theme .owl-controls .owl-nav [class*='owl-'] {
+    color: #fff;
+    background-color: #f3f3f3;
+}
+.bw-carousel > figcaption {
+    background-color: #f3f3f3;
+}
+.bw-carousel > figcaption > div > hr {
+    background: #fff;
+}
+.bw-carousel h3 {
+    background-color: #de3926;
+    color:#fff;
+}
+.bw-carousel h3 a,.bw-carousel h3 a:hover {
+    color: #fff;
+}
+.bw-carousel .bw-readmore-button {
+    border-left:5px solid #fff;
+    border-top:5px solid #fff;
+    color:#6f6f6f;
+}
+.bw-carousel .bw-readmore-button:hover {
+    color:#222;
+}
+/* ================= COLORBOX ================== */
+#cboxOverlay{
+    background:#fff;
+}
+#cboxContent{
+    background:#222;
+}
+.cboxIframe{
+    background:#de3926;
+}
+#cboxError{
+    border:1px solid #de3926;
+}
+#cboxLoadedContent{
+    background:#222;
+}
+#cboxLoadingOverlay{
+    background:#222;
+}
+#cboxTitle{
+    color:#fff;
+}
+/* ================= ACCORDION  ================== */
+#accordion-container {
+	border-top: 1px solid #f3f3f3;
+}
+.accordion-header {
+	border-bottom: 1px solid #f3f3f3;
+}
+.accordion-header:hover {
+	color:#de3926;
+}
+.active-header {
+	color:#de3926;
+}
+.accordion-content {
+	border-bottom: 1px solid #f3f3f3;
+}
+/* ================= GALLERY ================== */
+.gallerycontainer {
+    background-color: #f3f3f3;
+}
+.gallerycontent {
+    background-color: rgba(243,243,243,0.9);
+    border-left: 5px solid #fff;
+}
+.gallerycontent .bw-readmore-button {
+    border-left:5px solid #fff;
+    border-top:5px solid #fff;
+    color:#6f6f6f;
+}
+.gallerycontent .bw-readmore-button:hover {
+    color:#222;
+}
+.gallerycontent h4 a{
+    color:#222;
+}
+.gallerycontent h4 a:hover{
+    color:#de3926;
+}
+/* ================= BLOG ================== */
+.blogcontainer {
+    background-color: #f3f3f3;
+}
+.postcontent {
+    background-color: rgba(243,243,243,0.9);
+    border-left: 5px solid #fff;
+}
+.postcontent .bw-readmore-button {
+    border-left:5px solid #fff;
+    border-top:5px solid #fff;
+    color:#6f6f6f;
+}
+.postcontent .bw-readmore-button:hover {
+    color:#222;
+}
+.postcontent h4 a{
+    color:#222;
+}
+.postcontent h4 a:hover{
+    color:#de3926;
+}
+.blogpager .bw-button {
+    background-color: #6f6f6f;
+    border-color: #6f6f6f;
+    color:#fff;
+}
+.blogpager .bw-button:hover {
+    background-color: #222;
+    border: 3px solid #222;
+    color:#fff;
+}
+.comments_content {
+    background-color: #f3f3f3;
+}
+.comments_content:before {
+    border-bottom-color: #f5f1f0; !important;
+}
+/* ================= SIDEBAR ================== */
+.sidebar-box{
+    background-color: #f3f3f3;
+}
+.sidebar-list li a {
+    color: #6f6f6f;
+}
+.sidebar-list li a:hover{
+    color: #de3926;
+}
+.sidebar-list li {
+    border-bottom: 1px solid #fff;
+}
+.sidebar-post-title{
+    color: #6f6f6f;
+}
+.sidebar-post-title:hover{
+    color: #de3926;
+}
+.sidebar-posts li {
+    border-bottom: 1px solid #fff;
+}
+.sidebar-posts li img {
+    border:3px solid #fff;
+}
+.sidebar-posts li img:hover {
+    border:3px solid #de3926;
+}
+/* ================= LIGHTGALLERY ================== */
+.lg-actions .lg-next, .lg-actions .lg-prev {
+    background-color: #222;
+    color: #fff;
+}
+.lg-actions .lg-next:hover, .lg-actions .lg-prev:hover {
+    color: #fff;
+}
+.lg-toolbar {
+    background-color: #222;
+}
+.lg-toolbar .lg-icon {
+    color: #fff;
+}
+.lg-toolbar .lg-icon:hover {
+    color: #fff;
+}
+.lg-sub-html {
+    background-color: #fff;
+    color: #6f6f6f;
+}
+#lg-counter {
+    color: #fff;
+}
+.lg-outer .lg-thumb-outer {
+    background-color: #fff;
+}
+.lg-outer .lg-toogle-thumb {
+    background-color: #fff;
+    color: #222;
+}
+.lg-outer .lg-toogle-thumb:hover {
+    color: #222;
+}
+.lg-progress-bar {
+    background-color: #222;
+}
+.lg-progress-bar .lg-progress {
+    background-color: #de3926;
+}
+.lg-backdrop {
+    background-color: #f3f3f3;
+}
+/* ================= FLEX IMAGE ================== */
+.caption-image img {
+    border:10px solid #f3f3f3;
+}
+.caption-image figcaption {
+    background-color:rgba(243,243,243,0.9);
+}
+/* ================= TABS ================== */
+.resp-tab-active {
+    border-top: 3px solid #de3926 !important;
+}
+.resp-tabs-list li:hover {
+    background-color: #f3f3f3;
+}
+.resp-tabs-list li.resp-tab-active {
+    background-color: #f3f3f3;
+}
+.resp-tabs-container {
+    background-color: #f3f3f3;
+}
+.resp-tab-active {
+    background-color: #f3f3f3;
+}
+/*-----------Vertical tabs-----------*/
+
+.resp-vtabs .resp-tabs-list li:hover {
+    background-color: #f3f3f3;
+    border-left: 3px solid #de3926;
+}
+.resp-vtabs .resp-tabs-list li.resp-tab-active {
+    background-color: #f3f3f3;
+    border-left: 3px solid #de3926;
+}
+h2.resp-tab-active {
+    background-color: #f3f3f3;
+}
+@media only screen and (max-width: 768px) {
+    .resp-tab-active {
+        background-color: #de3926 !important;
+        color: #fff !important;
+    }
+}
+/* ================= PRICING TABLE ================== */
+.promo {
+    background: #f3f3f3;
+    color: #6f6f6f;
+}
+.promo h4{
+    color: #222;
+}
+.promo .price {
+    background: rgba(0,0,0,0.05);
+    color:#222;
+}
+.promo .brief {
+    color: #6f6f6f;
+}
+.featured-plan.promo {
+    background-color: #222;
+    color:#fff;
+}
+.featured-plan.promo h4{
+    color:#fff;
+}
+.featured-plan.promo .brief {
+    color: #fff;
+}
+.promo.featured-plan .price {
+    background-color: #de3926;
+    color:#fff;
+}
+.promo .bw-button {
+    border-color: #222;
+    background-color: #f3f3f3;
+    color:#222;
+}
+.promo .bw-button:hover {
+    border-color: #de3926;
+    background-color: #de3926;
+    color: #fff;
+}
+.featured-plan .bw-button {
+    border-color: #fff;
+    background-color: #222;
+    color:#fff;
+}
+.featured-plan .bw-button:hover {
+    border-color: #de3926;
+    background-color: #de3926;
+    color: #fff;
+}
+/* ================= TESTIMONIALS ================== */
+.testimonial .testimonial-text {
+    background-color: #f3f3f3;
+}
+.testimonial:before,.testimonial:after {
+	background-color: #de3926;
+    border:5px solid #fff;
+}
+.testimonial .testimonial-text:before {
+    border-top-color: #f3f3f3 !important;
+}
+.testimonial-name {
+    color: #222;
+}
+/* ================= FOOTER ================== */
+#footer {
+    background-color: #222;
+}
+.footer-content h1,.footer-content h2,.footer-content h3,.footer-content h4,.footer-content h5,.footer-content h6 {
+    color:#fff;
+}
+.footer-content, .footer-content p {
+    color:#6f6f6f;
+}
+.footer-info {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.tags {
+    color: #6f6f6f;
+    background-color: #fff;
+}
+.tags:hover {
+    color: #fff;
+    background-color: #de3926;
+}
+#footer .tags {
+    color: #fff;
+    border-left: 3px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+#footer .tags:hover {
+    color: #fff;
+    background-color: #de3926;
+}
+.footer-list li a {
+    color: #6f6f6f;
+}
+.footer-list li a:hover {
+    color: #fff;
+}
+.footer-list li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
