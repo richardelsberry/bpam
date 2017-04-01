@@ -1,0 +1,82 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>League List</title>
+    <link href="../static/css/main-static.css" rel="stylesheet" th:href="@{/css/main-static.css}" />
+    <!--<link href="../static/css/barrensavannah.css" rel="stylesheet" th:href="@{/css/barrensavannah.css}" />-->
+</head>
+
+<style type="text/css">
+/*    #container{
+        width:100%; height:100%;
+        background:url("/images/bpma-background3.jpg") no-repeat center center fixed;
+        background-size: contain;
+    }
+    #body{
+        width: 50%; height: 50%; top: 10%; margin: 0 auto; position: relative;
+    }*/
+    #entryForm{
+        /*float: left;*/
+        width: 100%;
+        align: left;
+    }
+    /*#leagueList{*/
+        /*margin-left: 35px;*/
+        /*margin-top: 100px;*/
+    /*}*/
+</style>
+
+<body>
+    <div id="page">
+        <div class="topNaviagationLink">
+            <a th:href="@{/search/}">ZipCode Search</a>
+        </div>
+    </div>
+    <div id="mainPicture">
+        <div class="picture">
+            <div id="entryForm"  style="overflow: hidden;">
+                <form method="POST">
+                    <label for="id">ID:</label>
+                    <input type="text" id="id" name="id" size="5" th:field="${league.id}" readonly="true"/>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" size="50" th:field="${league.name}" />
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="name" size="50" th:field="${league.email}" />
+                    <label for="phone">Phone:</label>
+                    <input type="text" id="phone" name="name" size="50" th:field="${league.phone}" />
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address1" size="50" th:field="${league.address1}" />
+                    <label for="zip">Zip:</label>
+                    <input type="text" id="zip" name="zip" size="15"  th:field="${league.zip}"/>
+                    <br/>
+                    <input type="submit" value="Save" name="save" />
+                    <input type="submit" value="Remove" name="remove" />
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="contentBox">
+        <div class="innerBox">
+            <div id="body" style="overflow: hidden;">
+                <div id="leagueList" th:unless="${#lists.isEmpty(allLeagues)}">
+                    <dl th:each="league : ${allLeagues}">
+                        <dt class="bookHeadline">
+                            <div id="wrapper" style="margin-left: 10px;">
+                                <div id="leftContent" style="float: right; width: 85%; padding: 1px;">
+                                    <a th:href="@{/search/} + ${league.id}" th:text="${league.name}"></a>
+                                </div>
+                                    <div id="rightContent" style="float: left; width: 10%; padding: 1px;">
+                                        <a th:href="@{/admin/edit/} + ${league.id}">Edit</a></div>
+                                </div>
+                            </dt>
+                    </dl>
+                </div>
+                <div th:if="${#lists.isEmpty(allLeagues)}">
+                    <p>There are no leagues available to display.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container">
+    </div>
+</body>
+</html>

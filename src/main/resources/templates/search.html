@@ -1,0 +1,172 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script type="text/javascript" th:src="@{/js/redline/apiRequest.js}" />
+    <script type="text/javascript" th:src="@{/js/redline/vkbeautify.0.98.01.beta.js}" />
+    <script type="text/javascript" th:src="@{/js/jquery.js}" />
+    <script type="text/javascript" th:src="@{/js/jquery-ui.min.js}" />
+</head>
+<body>
+    <div>
+        <p align="center" style="margin-top: 0; margin-bottom: 0"><b>
+            <font size="5" face="Rockwell Extra Bold" color="#0000FF">Minnesota Youth
+                Bowling</font></b></p>
+        <p align="center" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+        <p align="center" style="margin-top: 0; margin-bottom: 0">&nbsp;</p><font face="Arial"><b>
+            <font FACE="Arial" size="2" color="#FF0000">
+                <p style="margin-top: 0; margin-bottom: 0" align="center">Want to become a
+                    better bowler or bowling coach?</p>
+                <p style="margin-top: 0; margin-bottom: 0" align="center">
+                    <a target="_blank" href="http://www.unitedstatesbowlingacademy.com">The United States
+                        Bowling Academy</a>* can help!</p></font>
+            <font color="#000000" face="Arial">
+                <font FACE="Arial" size="1">
+                    <p style="margin-top: 0; margin-bottom: 0" align="center">* Based out of
+                        Faribault, MN</p>
+                    <p style="margin-top: 0; margin-bottom: 0" align="center">&nbsp;</p></font>
+                <font FACE="Arial" size="3">
+                    <p style="margin-top: 0; margin-bottom: 0" align="center">
+                        &nbsp;</p>
+                    <p style="margin-top: 0; margin-bottom: 0" align="center">&nbsp;</p>
+                </font>
+            </font>
+        </b>
+        </font>
+    </div>
+    <div align="center" style="font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#999999;">
+        <div align="center" style="font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#999999;">
+            <font face="Arial"><font color="#000000">
+                <p style="margin-top: 0; margin-bottom: 0">
+                    <!--<a target="_blank" href="#">-->
+                        <!--<img border="0" src="/images/Storm_generic%20banner_728x90.jpg"></a>-->
+                </p>
+                <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+                <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p><b>
+                <font FACE="Arial" size="3" color="#000000">
+                    <p style="margin-top: 0; margin-bottom: 0" align="center">&nbsp;</p>
+                </font>
+            </b>
+            <div align="center">
+                <table width="281" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td>
+                            <!--<img src="http://img.constantcontact.com/ui/images/visitor/bevel_tl_ltblue.gif" width="6" height="6" alt="">-->
+                        </td>
+                        <td>
+                        <!--background="http://img.constantcontact.com/ui/images/visitor/bevel_bg_top_ltblue.gif"> -->
+                        </td>
+                        <td>
+                            <!--<img src="http://img.constantcontact.com/ui/images/visitor/bevel_tr_ltblue.gif">-->
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <!-- END: Constant Contact Square Email List Button -->
+            <!-- BEGIN: SafeSubscribe -->
+            <div align="center" style="padding-top:5px;">
+                <a href="http://www.constantcontact.com/safesubscribe.jsp" target="_blank">
+                    <font color="#000000"><img src="http://img.constantcontact.com/ui/images1/safe_subscribe_logo.gif" border="0" width="168" height="14" alt=""/></font></a>
+            </div>
+            <!-- END: SafeSubscribe -->
+
+            <!-- BEGIN: Email Marketing you can trust -->
+            <div align="center" style="font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#999999;">
+                For
+                <a href="http://www.constantcontact.com/index.jsp" style="text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-size:10px;" target="_blank">
+                    <font color="#000000">Email Marketing</font></a> you can trust
+                <p align="center" style="margin-top: 0; margin-bottom: 0">
+                    &nbsp;</p>
+                <div align="center" style="font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#999999;">
+                    &nbsp;</div>
+            </div>
+
+                <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+                <p style="margin-top: 0; margin-bottom: 0"><b><font color="#FF00FF" size="5">Upcoming Youth
+                    Bowling</font></b></p>
+                <p style="margin-top: 0; margin-bottom: 0"><b><font color="#FF00FF" size="5">**** Tournaments &amp; Events
+                    ****</font></b></p>
+                </font>
+            </font>
+        </div>
+    </div>
+    <div class="container" align="center" style="margin-top: 50px;">
+        <div class="accordion" id="accordion-api">
+            <a th:href="@{/admin}">Back to admin page</a>
+            <div class="accordion-group">
+                <div id="radius" >
+                        <form method="GET" action="" onsubmit="makeApiRequest($(this)); return false;">
+                        <div>
+                            <p>
+                                Find all leagues within a given radius of a zip code.
+                                <div style="display: none;">
+                                    <code class="endpoint">https://zipcodedistanceapi.redline13.com/rest/&lt;api_key&gt;/radius.&lt;format&gt;/&lt;zip_code&gt;/&lt;distance&gt;/&lt;units&gt;?minimal</code>.
+                                </div>
+                            </p>
+                            <div class="row" style="display: none;">
+                                <div class="span6">
+                                    <label>API Key</label>
+                                    <input class="input-block-level" type="text" name="api_key" value="js-GcUhqNYJbu1CeWQdDY3KRxQvJ5kox1tednwDbummYoZdlPqYOuIG1zcLEwacxDqK" required="required" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div  style="display: none;">
+                                    <label>Format</label>
+                                    <select class="input-mini" name="format" required="required">
+                                        <option value="json" selected="selected">json</option>
+                                        <option value="xml">xml</option>
+                                        <option value="csv">csv</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label>Zip Code</label>
+                                    <input class="input-mini" type="text" name="zip_code" placeholder="Zip Code" required="required" />
+                                </div>
+                                <div>
+                                    <label>Miles</label>
+                                    <input class="input-mini" type="number" min="0" name="distance" placeholder="Distance" required="required" />
+                                </div>
+                                <div style="display: none;">
+                                    <label>Units</label>
+                                    <select class="input-mini" name="units" required="required">
+                                        <option value="km">km</option>
+                                        <option value="mile" selected="selected">mile</option>
+                                    </select>
+                                </div>
+                                <div class="span2 offset1">
+                                    <label>&nbsp;</label>
+                                    <button class="btn" type="submit">Make Request</button>
+                                </div>
+                                <div id="searchResponse" name="searchResponse"  style="display: none;" ></div>
+                            </div>
+                            <!--<div id="locationList" th:unless="${#lists.isEmpty(locations)}">-->
+                                <!--<label for="foundLeagues">Leagues</label>-->
+                                <!--<dl id="foundLeagues" th:each="league : ${locations}">-->
+                                    <!--<dt class="bookHeadline">-->
+                                        <!--<span th:text="${league.name}">Name</span>-->
+                                        <!--&nbsp;&nbsp;&nbsp;-->
+                                        <!--<a th:href="@{/search/} + ${league.id} "><span>Go to site</span></a>-->
+                                    <!--</dt>-->
+                                <!--</dl>-->
+                                <!--&lt;!&ndash;<select id="foundLeagues">&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<option value="0" text="Select a location" ></option>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<option th:each="league : ${locations}" th:value="${league.id}" th:text="#{${league.name}}">locations</option>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</select>&ndash;&gt;-->
+                            <!--</div>-->
+                            <!--<div th:if="${#lists.isEmpty(locations)}">-->
+                                <!--<p>No leagues were found.</p>-->
+                            <!--</div>-->
+                            <!--<div class="request-url" style="display: none; margin: 5px 0;">-->
+                                <!--<span class="label">Request URL</span>-->
+                                <!--<code></code>-->
+                            <!--</div>-->
+                            <pre class="response" style="display: none;"></pre>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+            </div>
+    </div>
+</body>
+</html>

@@ -117,9 +117,9 @@ div.banner span {
 }
 
 form {
-    border: solid 1px lightgray;
-    padding: 2em;
-    background-color: #e0f0c2;
+    border: solid 0px lightgray;
+    padding: 1em;
+    background: rgba(88, 94, 76, 0.6);
 }
 
 label, textarea, input, select {
