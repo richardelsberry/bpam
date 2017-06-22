@@ -25,32 +25,61 @@ public class LeagueEntity {
     private String hours;
     private String event;
     private String url;
+    private String monday;
+    private String tuesday;
+    private String wednesday;
+    private String thursday;
+    private String friday;
+    private String saturday;
+    private String sunday;
+    private String startenddate;
+    private String aboutus;
+    private String costtoparticipate;
+    private String advantages;
 
-    public LeagueEntity() {
+    public String getRegister() {
+        return register;
     }
 
-    public LeagueEntity(String name,
-                        String address1,
-                        String address2,
-                        String email,
-                        String city,
-                        String state,
-                        String zip,
-                        String phone,
-                        String hours,
-                        String event,
-                        String url) {
-        this.name = name;
-        this.address1 = address1;
-        this.address2 = address2;
-        this.email = email;
-        this.city = city;
-        this.state = state;
-        this.zip = zip;
-        this.phone = phone;
-        this.hours = hours;
-        this.event = event;
-        this.url = url;
+    public void setRegister(String register) {
+        this.register = register;
+    }
+
+    public String getAdvantages() {
+        return advantages;
+    }
+
+    public void setAdvantages(String advantages) {
+        this.advantages = advantages;
+    }
+
+    private String register;
+
+    public String getCosttoparticipate() {
+        return costtoparticipate;
+    }
+
+    public void setCosttoparticipate(String costtoparticipate) {
+        this.costtoparticipate = costtoparticipate;
+    }
+
+    public String getAboutus() {
+        return aboutus;
+    }
+
+    public void setAboutus(String aboutus) {
+        this.aboutus = aboutus;
+    }
+
+    public String getStartenddate() {
+        return startenddate;
+    }
+
+    public void setStartenddate(String startenddate) {
+        this.startenddate = startenddate;
+    }
+
+    public LeagueEntity() {
     }
 
     public Long getId() {
@@ -147,5 +176,61 @@ public class LeagueEntity {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getMonday() {
+        return monday;
+    }
+
+    public void setMonday(String monday) {
+        this.monday = monday;
+    }
+
+    public String getTuesday() {
+        return tuesday;
+    }
+
+    public void setTuesday(String tuesday) {
+        this.tuesday = tuesday;
+    }
+
+    public String getWednesday() {
+        return wednesday;
+    }
+
+    public void setWednesday(String wednesday) {
+        this.wednesday = wednesday;
+    }
+
+    public String getThursday() {
+        return thursday;
+    }
+
+    public void setThursday(String thursday) {
+        this.thursday = thursday;
+    }
+
+    public String getFriday() {
+        return friday;
+    }
+
+    public void setFriday(String friday) {
+        this.friday = friday;
+    }
+
+    public String getSaturday() {
+        return saturday;
+    }
+
+    public void setSaturday(String saturday) {
+        this.saturday = saturday;
+    }
+
+    public String getSunday() {
+        return sunday;
+    }
+
+    public void setSunday(String sunday) {
+        this.sunday = sunday;
     }
 }

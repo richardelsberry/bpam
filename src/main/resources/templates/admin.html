@@ -46,7 +46,33 @@
                     <label for="address">Address:</label>
                     <input type="text" id="address" name="address1" size="50" th:field="${league.address1}" />
                     <label for="zip">Zip:</label>
-                    <input type="text" id="zip" name="zip" size="15"  th:field="${league.zip}"/>
+                    <input type="text" id="zip" name="zip" size="15" th:field="${league.zip}"/>
+                    <label for="zip">Website:</label>
+                    <input type="url" id="url" name="url" size="15" th:field="${league.url}"/>
+                    <label for="monday">Monday Hours:</label>
+                    <input type="text" id="monday" name="monday" size="15" th:field="${league.monday}"/>
+                    <label for="tuesday">Tuesday Hours:</label>
+                    <input type="text" id="tuesday" name="tuesday" size="15" th:field="${league.tuesday}"/>
+                    <label for="wednesday">Wednesday Hours:</label>
+                    <input type="text" id="wednesday" name="wednesday" size="15" th:field="${league.wednesday}"/>
+                    <label for="thursday">Thursday Hours:</label>
+                    <input type="text" id="thursday" name="thursday" size="15" th:field="${league.thursday}"/>
+                    <label for="friday">Friday Hours:</label>
+                    <input type="text" id="friday" name="friday" size="15" th:field="${league.friday}"/>
+                    <label for="saturday">Saturday Hours:</label>
+                    <input type="text" id="saturday" name="saturday" size="15" th:field="${league.saturday}"/>
+                    <label for="zip">Sunday Hours:</label>
+                    <input type="sunday" id="sunday" name="sunday" size="15" th:field="${league.sunday}"/>
+                    <label for="costtoparticipate">Cost To Participate:</label>
+                    <input type="text" id="costtoparticipate" name="costtoparticipate" size="15" th:field="${league.costtoparticipate}"/>
+                    <label for="startenddate">League start/end date:</label>
+                    <input type="text" id="startenddate" name="startenddate" size="45" th:field="${league.startenddate}"/>
+                    <label for="aboutus">Other Info:</label>
+                    <textarea id="aboutus" rows="1" cols="10" maxlength="200" th:field="${league.aboutus}"/>
+                    <label for="advantages">Club/League Advantages:</label>
+                    <textarea id="advantages" rows="1" cols="10" maxlength="200" th:field="${league.advantages}"/>
+                    <label for="register">How To Register:</label>
+                    <textarea id="register" rows="1" cols="10" maxlength="200" th:field="${league.register}"/>
                     <br/>
                     <input type="submit" value="Save" name="save" />
                     <input type="submit" value="Remove" name="remove" />
